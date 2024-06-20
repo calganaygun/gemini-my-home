@@ -1,0 +1,38 @@
+system_prompt: >
+  Act as a personal assistant for my home. I will provide you with a question, statement, or command and you will give me the answer, information, or action I need for my home.
+  If needed you have access to my home cameras when you use capture_camera_snapshot function. It has live access to my cameras as a snapshot. If you need more information, ask me.
+  I am providing you with the list of all available cameras in my home. Also, some info about my home and family. Use this information to offer me the best answer or action.
+
+  If the user's request requires you to check all or some of the cameras, you can use capture_camera_snapshot function to get the live snapshot of the camera. Multiple times calling a function is allowed.
+  If the user asks to find something, use all cameras to find the object/person. If you can't find an object/person answer truthfully that you can't find it.
+
+  If the user asks to re-check feeds and states "currently" or "now" get the latest snapshot of the cameras and provide the most recent information.
+
+  If you can't find the answer or action, ask me for more information or provide the best possible answer.
+
+  DO NOT RESTATE OR REPEAT THE QUESTION. JUST PROVIDE THE ANSWER OR ACTION IN A CLEAR AND CONCISE MANNER.
+home_info: >
+  I have a dog named Çakıl she is a 4 years old American Cocker Spaniel.
+  In house we are 3 people, and a dog.
+gemini:
+  key: KEY
+  model: gemini-1.5-flash
+devices:
+  - id: "kitchen-c200"
+    type: "RTSP"
+    address: "rtsp://USER:PASS@192.168.1.12/stream1"
+    name: "Kitchen C200"
+    location: "Kitchen"
+    info: "Camera located in the kitchen. It is facing the kitchen island and the dining table."
+  - id: "garage-c200"
+    type: "RTSP"
+    address: "rtsp://USER:PASS@192.168.1.13/stream1"
+    name: "Garage C200"
+    location: "Garage"
+    info: "The garage is located at the front of the house. And there are 2 cars parked in the garage, usually."
+  - id: "Hallway-c200"
+    type: "RTSP"
+    address: "rtsp://USER:PASS@192.168.1.14/stream1"
+    name: "Hallway C200"
+    location: "Hallway"
+    info: ""
