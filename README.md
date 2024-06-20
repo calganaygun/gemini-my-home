@@ -24,6 +24,16 @@ Gemini My Home is a project that leverages the Google Gemini API to ask question
 
 Before using the project, configure the `devices.yaml` file with your device and API information. This file should include details about your cameras, rooms, and other relevant information.
 
+## Usage
+
+To start the project, run the following command:
+
+```bash
+python main.py
+```
+
+![Snapshot of an example question](image.png)
+
 ## Notes
 This project requires a Google Gemini API key to access the language model. You can obtain an API key by following the instructions in the [official documentation](https://ai.google.dev/gemini-api/docs/api-key).
 
